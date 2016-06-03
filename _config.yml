@@ -5,7 +5,7 @@ description:        "Data Scientist"
 reading_time:       true
 words_per_minute:   200
 logo:               'assets/img/itsakettle.png'
-background:         'assets/img/background.jpg'
+background:         'assets/img/squiggles.jpg'
 tiled_bg:           false   # Set this true if you want to tile your background image, otherwise it will be covered
 locale:             en_ie
 url:                
