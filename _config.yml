@@ -5,7 +5,7 @@ description:        "itsatoaster. itsafridge. no...itsakettle"
 reading_time:       true
 words_per_minute:   200
 logo:               'assets/img/itsakettle.png'
-background:         'assets/img/squiggles_green.png'
+background:         'assets/img/background.png'
 tiled_bg:           false   # Set this true if you want to tile your background image, otherwise it will be covered
 locale:             en_ie
 url:                
