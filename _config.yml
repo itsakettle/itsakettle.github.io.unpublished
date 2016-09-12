@@ -1,11 +1,11 @@
 # Site
 title:              itsakettle
-bio:                "itsatoaster. itsafridge. no..."
-description:        "itsatoaster. itsafridge. no...itsakettle"
+bio:                "Blogging to learn"
+description:        "Blogging to learn"
 reading_time:       true
 words_per_minute:   200
 logo:               'assets/img/itsakettle.png'
-background:         'assets/img/background.png'
+background:         'assets/img/berries.jpg'
 tiled_bg:           false   # Set this true if you want to tile your background image, otherwise it will be covered
 locale:             en_ie
 url:                
