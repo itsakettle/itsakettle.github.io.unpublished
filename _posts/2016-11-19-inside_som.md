@@ -9,10 +9,10 @@ draft: true
   
 
 
-When I first learned about Self-Organising Maps I thought...cool name. Thereafter it became a way to try to understand the structure of data sets. Although I knew how they work, I never felt I quite understood why. I have always been keen to look under the hood and see what the 'organisation' process looks like. So I forked [the Kohonen Package on the CRAN github mirror](https://github.com/cran/kohonen) and gave it a go.
+When I first heard of _self-organising maps_ I wondered were they as cool as their name suggested. I have always been keen to look under the hood and see what the 'organisation' process looks like. So I forked [the kohonen Package on the CRAN github mirror](https://github.com/cran/kohonen) and gave it a go.
 
 # The SOM algorithm
-The Self-Organising Map (hereafter SOM) algorithm was introduced by [Teuvo Kohonen](https://en.wikipedia.org/wiki/Teuvo_Kohonen) in the 1980s. There is a good description of it in [Elements of Statistical Learning](http://statweb.stanford.edu/~tibs/ElemStatLearn/). I will give a much less formal and complete description. The package [kohonen](https://cran.r-project.org/web/packages/kohonen/index.html) implements the algorithm in R. There are a lot of parameters and functionality which I will avoid describing in order to keep things simple. I just want to give a feel for how it all works.
+The Self-Organising Map (hereafter SOM) algorithm was introduced by [Teuvo Kohonen](https://en.wikipedia.org/wiki/Teuvo_Kohonen) in the 1980s. There is a good description of it in [Elements of Statistical Learning](http://statweb.stanford.edu/~tibs/ElemStatLearn/). I will give a more informal and less complete description. The package [kohonen](https://cran.r-project.org/web/packages/kohonen/index.html) implements the algorithm in R. There are a lot of parameters and functionality which I will avoid describing in order to keep things simple. I just want to give a feel for how it all works.
 
 Say we have a bunch of unlabeled data with each observation consisting of n numeric variables. Each observation can be thought of as a point in $$\mathbb{R}^{n}$$. The [iris](https://en.wikipedia.org/wiki/Iris_flower_data_set) data set is a good example. Let's have a look at it.
 
@@ -90,7 +90,7 @@ som.model <- som(as.matrix(dt.iris.unlabeled.scaled),
                  som.grid)
 {% endhighlight %}
 
-The SOM has been produced using the unlabeled data. The plot below uses `plot.kohonen` with `type=mapping` to show the different species that have been assigned to each code i.e. we now layer the Species information on top of the map.
+The SOM has been produced using the unlabeled data. The plot below uses `plot.kohonen` with `type=mapping` to show the different species that have been assigned to each code i.e. we now layer the species information on top of the map.
 
 
 {% highlight r %}
@@ -120,7 +120,7 @@ plot(som.model, type="mapping", labels=as.numeric(iris$Species),
 
 From the plot we can make the following observations:
 
-* The Setosa species (1s) seems to be separate from the other two species. This could be investigated further using the other kohonen plots. For instance we can plot the total distance of each code from it's neighbours with `type=dist.neighbours` . We can see a boundary of sorts around the 4 Setosa species codes indicating a gap between these codes and the others.
+* The setosa species (1s) seems to be separate from the other two species. This could be investigated further using the other kohonen plots. For instance we can plot the total distance of each code from its neighbours with `type=dist.neighbours` . We can see a boundary of sorts around the 4 setosa species codes indicating a gap between these codes and the others.
 
 
 {% highlight r %}
@@ -129,7 +129,7 @@ plot(som.model, type="dist.neighbours")
 
 ![plot of chunk iris-example-plot2](assets/img/inside_som/figure/iris-example-plot2-1.png)
 
-* The Versicolor and Virginica (2s and 3s) species can nearly be separated. We can use the plot to identify potentially interesting flowers by looking at codes with a mix of the two species. For instance in code 6 there are 9 Versicolor and 1 Virginica. This Virginica flower might be of interest given its so similar to many Versicolor flowers and is so far away from the other Virginica flowers.
+* The versicolor and virginica (2s and 3s) species can nearly be separated. We can use the plot to identify potentially interesting flowers by looking at codes with a mix of the two species. For instance in code 6 there are 9 versicolor and 1 virginica. This virginica flower might be of interest given it's so similar to many versicolor flowers and is so far away from the other virginica flowers.
 
 
 {% highlight r %}
@@ -167,7 +167,7 @@ From this plot we can observe:
 
 * The setosa species appears to vary mostly by sepal width with its petal length and petal width being smaller than the other species. 
 
-* The versicolor and virginica species (2s and 3s in the plot above) seem to vary mostly by there sepal length and sepal width.
+* The versicolor and virginica species (2s and 3s in the plot above) seem to vary mostly by their sepal length and sepal width.
 
 # Inside an SOM
 
