@@ -63,7 +63,7 @@ dt.iris.unlabeled
 ## 150:          5.9         3.0          5.1         1.8
 {% endhighlight %}
 
-So in this case we can think of each row as a vector in $$\mathbb{R}^{4}$$. The goal of SOM is to find k points in $$\mathbb{R}^{n}$$ that each act as some sort of representative of a different subset of the data. In the kohonen algorithm these are called _codes_. This is the aim of many clustering algorithms. SOM goes further by enumerating the codes and arranging them in a 2 dimensional grid. For example if k is 16 we can have a 4x4 grid.
+So in this case we can think of each row as a vector in $$\mathbb{R}^{4}$$. The goal of SOM is to find k points in $$\mathbb{R}^{n}$$ that each act as some sort of representative of a different subset of the data. The kohonen package in R calls these _codes_. This is the aim of many clustering algorithms. SOM goes further by enumerating the codes and arranging them in a 2 dimensional grid. For example if k is 16 we can have a 4x4 grid.
 
 
 {% highlight r %}
