@@ -4,7 +4,6 @@ title:  "Inside a Self-Organising Map"
 date:   2017-03-16
 comments: false
 categories: som
-draft: true
 ---
   
 
