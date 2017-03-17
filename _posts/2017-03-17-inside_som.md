@@ -11,7 +11,7 @@ categories: som
 When I first heard of _self-organising maps_ I wondered were they as cool as their name suggested. I have always been keen to look under the hood and see what the 'organisation' process looks like. So I forked [the kohonen Package on the CRAN github mirror](https://github.com/cran/kohonen) and gave it a go.
 
 # The SOM algorithm
-The Self-Organising Map (hereafter SOM) algorithm was introduced by [Teuvo Kohonen](https://en.wikipedia.org/wiki/Teuvo_Kohonen) in the 1980s. There is a good description of it in [Elements of Statistical Learning](http://statweb.stanford.edu/~tibs/ElemStatLearn/). I will give a more informal and less complete description. The package [kohonen](https://cran.r-project.org/web/packages/kohonen/index.html) implements the algorithm in R. There are a lot of parameters and functionality which I will avoid describing in order to keep things simple. I just want to give a feel for how it all works.
+The self-organising map (hereafter SOM) algorithm was introduced by [Teuvo Kohonen](https://en.wikipedia.org/wiki/Teuvo_Kohonen) in the 1980s. There is a good description of it in [Elements of Statistical Learning](http://statweb.stanford.edu/~tibs/ElemStatLearn/). I will give a more informal and less complete description. The package [kohonen](https://cran.r-project.org/web/packages/kohonen/index.html) implements the algorithm in R. There are a lot of parameters and functionality which I will avoid describing in order to keep things simple. I just want to give a feel for how it all works.
 
 Say we have a bunch of unlabeled data with each observation consisting of n numeric variables. Each observation can be thought of as a point in $$\mathbb{R}^{n}$$. The [iris](https://en.wikipedia.org/wiki/Iris_flower_data_set) data set is a good example. Let's have a look at it.
 
@@ -38,7 +38,7 @@ Say we have a bunch of unlabeled data with each observation consisting of n nume
 ## 150:          5.9         3.0          5.1         1.8 virginica
 {% endhighlight %}
 
-We can see it has five columns. Four of these describe dimensions of the flower petal and sepal. The last column tells us which species the flower belongs to. For the time being let's remove the species column and use the 4 numeric columns to create a Self-Organising Map. We'll make use of the species column again later on.
+We can see it has five columns. Four of these describe dimensions of the flower petal and sepal. The last column tells us which species the flower belongs to. For the time being let's remove the species column and use the 4 numeric columns to create a self-organising map. We'll make use of the species column again later on.
 
 
 {% highlight r %}
@@ -381,7 +381,7 @@ saveVideo({
 # Knowledge vs Understanding
 For me this little experiment is a demonstration of knowledge vs understanding. [This](https://www.youtube.com/watch?v=MFzDaBzBlL0) video from Smarter Every Day explains this nicely and there is also an analogous clicking into place moment. 
 
-I knew how a Self-Organising Map works but I didn't understand. Looking under the hood certainly helped me to understand why the algorithm works. I found it very useful to see how the codes and their neighbours all move together and how this is key to creating a 'map'. By seeing the position of the codes as the algorithm progresses we can get a really good feel for how the algorithm is working. 
+I knew how a self-organising map works but I didn't understand. Looking under the hood certainly helped me to understand why the algorithm works. I found it very useful to see how the codes and their neighbours all move together and how this is key to creating a 'map'. By seeing the position of the codes as the algorithm progresses we can get a really good feel for how the algorithm is working. 
 
 In the iris example there appears to be a prolonged period where the codes are being dragged all over the place - roughly 30 full passes of the data. Then suddenly the codes click into place. I find it interesting how the repeated application of simple operations can lead to this complex behaviour. I won't attempt to explain this any further. I would much rather leave you with the impression of the videos above.
 
