@@ -188,7 +188,7 @@ plot(som.model, type="mapping", labels=as.numeric(iris$Species),
 
 ![plot of chunk 2d-iris-example](assets/img/inside_som/figure/2d-iris-example-1.png)
 
-This can only be known as a catepillar plot. Of course since the dimensions are low we can visualise the location of each code, the code represents each data point and the species of each data point (using colour).
+It kind of looks like a catepillar. Of course since the dimensions are low we can visualise the location of each code, the code represents each data point and the species of each data point (using colour).
 
 
 {% highlight r %}
