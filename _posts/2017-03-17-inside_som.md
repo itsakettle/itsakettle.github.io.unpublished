@@ -2,7 +2,7 @@
 layout: post
 title:  "Inside a Self-Organising Map"
 date:   2017-03-17
-comments: false
+comments: true
 categories: som
 ---
   
