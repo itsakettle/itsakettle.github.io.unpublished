@@ -188,22 +188,22 @@ plot(som.model, type="mapping", labels=as.numeric(iris$Species),
 
 ![plot of chunk 2d-iris-example](assets/img/inside_som/figure/2d-iris-example-1.png)
 
-It kind of looks like a catepillar. Of course since the dimensions are low we can visualise the location of each code, the code represents each data point and the species of each data point (using colour).
+It kind of looks like a caterpillar. Of course since the dimensions are low we can visualise the location of each code, the code represents each data point and the species of each data point (using colour).
 
 
 {% highlight r %}
-  dt.catepillar.2d <- dt.iris.unlabeled.scaled.sepal.only[, code := som.model$unit.classif]
-  dt.catepillar.2d[, Species := iris$Species]
-  dt.catepillar.2d.codes <- as.data.table(som.model$codes)
-  dt.catepillar.2d.codes[, code := 1:.N]
-  ggplot(dt.catepillar.2d, aes(x=Sepal.Length, y=Sepal.Width)) +
+  dt.caterpillar.2d <- dt.iris.unlabeled.scaled.sepal.only[, code := som.model$unit.classif]
+  dt.caterpillar.2d[, Species := iris$Species]
+  dt.caterpillar.2d.codes <- as.data.table(som.model$codes)
+  dt.caterpillar.2d.codes[, code := 1:.N]
+  ggplot(dt.caterpillar.2d, aes(x=Sepal.Length, y=Sepal.Width)) +
     geom_text(aes(label=code, color=Species)) +
-    geom_label(aes(x=Sepal.Length, y=Sepal.Width, label=code), dt.catepillar.2d.codes) +
+    geom_label(aes(x=Sepal.Length, y=Sepal.Width, label=code), dt.caterpillar.2d.codes) +
     theme(panel.grid.major=element_blank(),
           panel.grid.minor=element_blank())
 {% endhighlight %}
 
-![plot of chunk catepillar-2d](assets/img/inside_som/figure/catepillar-2d-1.png)
+![plot of chunk caterpillar-2d](assets/img/inside_som/figure/caterpillar-2d-1.png)
 
 Let's see how all this come about. In the SOM algorithm the entire data set is shown to the algorithm many times - the default in the kohonen package (parameter `rlen`) is 100 times. The `iris` dataset has 150 observations, so in the examples above 15,000 data points are shown to the algorithm in total. 
 
