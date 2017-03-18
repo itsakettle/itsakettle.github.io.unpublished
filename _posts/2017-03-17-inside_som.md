@@ -357,7 +357,7 @@ saveVideo({
 
 First we look at a video of run 1 to run 100 and we can see how the codes set into their final positions around run 35.
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/y7S4b6VM2gQ?rel=0" frameborder="0" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/z3n3fm6Rlno?rel=0" frameborder="0" allowfullscreen></iframe>
 
 Finally let's look at run 24 to 35 at an observation by observation level. In particular, pay attention to run 30 onwards as this is where the codes find their final positions. There appears to be a crucial few iterations where the codes click into their final positions.
 
@@ -376,7 +376,7 @@ saveVideo({
 
 
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/vLxUYZnRnCw?rel=0" frameborder="0" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/_Ok8dvdNxko?rel=0" frameborder="0" allowfullscreen></iframe>
 
 # Knowledge vs Understanding
 For me this little experiment is a demonstration of knowledge vs understanding. [This](https://www.youtube.com/watch?v=MFzDaBzBlL0) video from Smarter Every Day explains this nicely and there is also an analogous clicking into place moment. 
