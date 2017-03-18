@@ -4,6 +4,7 @@ title:  "Inside a Self-Organising Map"
 date:   2017-03-17
 comments: true
 categories: som
+feature: assets/img/inside_som/inside_som.png
 ---
   
 
